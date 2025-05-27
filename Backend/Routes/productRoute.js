@@ -2,6 +2,8 @@ import express from 'express';
 import Product from '../models/productModel.js'
 const router = express.Router();
 
+//post method
+
 router.post('/',async (req,res)=>{
 
     const product = req.body;
@@ -22,6 +24,27 @@ router.post('/',async (req,res)=>{
         return res.status(500).json({sucess:false,message:"Server Error"});
 
     }
+
+})
+
+// Get method
+
+router.delete('/:id',async (req,res)=>{
+
+    const id =req.params.id;
+    
+    try{
+
+        await Product.findByIdAndDelete(id);
+        
+        
+    }catch(error){
+
+    }
+
+
+
+
 
 })
 
