@@ -27,7 +27,7 @@ router.post('/',async (req,res)=>{
 
 })
 
-// Get method
+// delete methid
 
 router.delete('/:id',async (req,res)=>{
 
@@ -36,9 +36,12 @@ router.delete('/:id',async (req,res)=>{
     try{
 
         await Product.findByIdAndDelete(id);
-        
+        res.status(200).json({sucess:true,message:"produt deleted successfully"})
+
         
     }catch(error){
+
+         res.status(404).json({sucess:false,message:"produt not found"})
 
     }
 
