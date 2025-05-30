@@ -7,12 +7,13 @@ import productRoute from './Routes/productRoute.js'
 
 dotEnv.config()
 const app = express()
+const PORT = process.env.PORT;
 
 app.use(express.json()); 
 
-app.listen(5000,()=>{
+app.listen(PORT,()=>{
     connectDB()
-    console.log('server running on port 5000...')
+    console.log('server running on http://localhost:'+PORT)
 })
 
 
