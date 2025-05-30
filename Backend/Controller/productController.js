@@ -1,4 +1,3 @@
-import express from 'express';
 import Product from '../models/productModel.js'
 import mongoose from 'mongoose'
 
