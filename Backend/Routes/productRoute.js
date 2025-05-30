@@ -48,7 +48,7 @@ router.delete('/:id',async (req,res)=>{
 
 })
 
-//Get method
+//Get a product method
 
 router.get("/:id",async (req,res)=>{
     const id = req.params.id;
@@ -63,6 +63,26 @@ router.get("/:id",async (req,res)=>{
         res.status(404).json({sucess:false,message:"prodoct not found"})
 
     }
+
+})
+
+//Get all products method
+
+router.get('/', async (req,res)=>{
+
+    try{
+        const products = await Product.find({});
+        res.status(200).json({success:true,data:products});
+    }
+
+    catch(error){
+
+        console.log("error in fetching products : ",error.message);
+        res.status(500).json({success:false,message:"Server Error"});
+
+
+    }
+
 
 })
 
