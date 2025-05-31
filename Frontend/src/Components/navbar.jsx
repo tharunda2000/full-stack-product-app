@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const navbar = () => {
 
@@ -9,15 +10,16 @@ const navbar = () => {
 
             
             {/* Desktop Menu */}
-            <div className="hidden sm:flex items-center gap-8">
-                <a href="#">Home</a>
-                <a href="#">Create</a>
-                <a href="#">All products</a>
+            <div className="hidden sm:flex items-center gap-8 text-xl">
+                <Link to={"/"} className='hover:text-indigo-500'>Home</Link>
+                <Link to={"/create"} className='hover:text-indigo-500'>Create</Link>
+                <Link to={"/"} className='hover:text-indigo-500'>All inventory</Link>
+                
   
             </div>
 
             <div className='sm:hidden lg:flex'>
-              <h1 className='text-3xl bebas-neue-regular '>
+              <h1 className='text-3xl bebas-neue-regular text-indigo-700'>
                 Inventory Management System
               </h1>
             </div>
