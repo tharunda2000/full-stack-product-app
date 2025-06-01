@@ -6,7 +6,7 @@ const navbar = () => {
   const [open, setOpen] = React.useState(false)
 
   return (
-    <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
+    <nav className="flex fixed top-0 right-0 left-0 items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white  transition-all">
 
             
             {/* Desktop Menu */}
@@ -19,7 +19,7 @@ const navbar = () => {
             </div>
 
             <div className='sm:hidden lg:flex'>
-              <h1 className='text-3xl bebas-neue-regular text-indigo-700'>
+              <h1 className='text-3xl pt-sans-bold text-indigo-500 text-shadow-lg'>
                 Inventory Management System
               </h1>
             </div>
